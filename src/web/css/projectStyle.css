@@ -1,0 +1,24 @@
+#pageTitle {
+  margin-left: 20%;
+  margin-top: 8%;
+
+  /* font-size: 50px; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: slateblue;
+}
+
+.pageContent {
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 18px;
+  color: indigo;
+
+  /* 沒有讀到MingLiU此種字形 */
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+  word-break: break-all;
+}
+
+p.context {
+  border: black 1px solid;
+}

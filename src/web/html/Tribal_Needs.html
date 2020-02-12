@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>部落需求</title>
+        <meta name= "viewport" content= "width-device-width, initial-scale= 1.0">
+        <link rel="stylesheet" type="text/css" href="../css/templateCss.css">
+        <!-- init import-->
+        <a>
+        <!--script type="text/javascript" src="/js/lib/dummy.js"></script-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <!--style id="compiled-css" type="text/css"></style-->
+        </a>
+        <script>
+            function assignPage(itemName){
+                location.assign('./Fill_Infomation.html'+'?itemName='+itemName);
+            }
+        </script> 
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="../image/logo.png" alt="" style="max-width: 80px">
+                </a>
+                <button class="custom-toggler navbar-toggler" type="button" 
+                    data-toggle="collapse" data-target="#projectNavbar" 
+                    aria-controls="navbarResponsive" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="projectNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">首頁
+                            <!--span class="sr-only">(current)</span-->
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Website_Concept.html">網站理念</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Culture_Introduction.html">文化介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Daily_Introduction.html">日常介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Tribal_Needs.html">部落需求</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contact_Us.html">聯絡我們</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div><h1 style="margin-left: 0">部落需求</h1></div>
+        </div>
+        <section id="intro-header">
+            <div class="container">
+                <div class="row">
+                    <div class="wrap-headline">
+                        <h1 class="text--center">松林啟航 部落飛翔</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <h1 class="mt-5">需求物品</h1>
+            
+            <div class="row Tribal_Needs_Area align-items-center" onclick="assignPage('book')">
+                <div class="col-sm-5 col-xs-12">
+                    <img src="../image/book.png" class="Tribal_Needs_Img align-items-center">
+                </div>
+                <div class="col-sm-7 col-xs-12 Tribal_Needs_word">
+                    <h3 id="books"><b>書籍</b><br></h3>
+                    <p>讓原住民們能夠在書屋有足夠的書本能夠學習。</p>
+                </div>
+            </div>
+
+            <div class="row Tribal_Needs_Area align-items-center" onclick="assignPage('dehumidifier')">
+                <div class="col-sm-5 col-xs-12">
+                    <img src="../image/dehumidifier.png" class="Tribal_Needs_Img align-items-center">
+                </div>
+                <div class="col-sm-7 col-xs-12 Tribal_Needs_word ">
+                    <h3 ><b>除濕機</b><br></h3>
+                    <p>避免書籍因潮濕問題而無法保存</p>
+                </div>
+            </div>
+
+            <div class="row Tribal_Needs_Area align-items-center" onclick="assignPage('bookcase')">
+                <div class="col-sm-5 col-xs-12">
+                    <img src="../image/bookcase.png" class="Tribal_Needs_Img align-items-center">
+                </div>
+                <div class="col-sm-7 col-xs-12 Tribal_Needs_word ">
+                    <h3 ><b>書櫃</b><br></h3>
+                    <p>能夠有效率的整理書籍，並且將其分類，方便尋找</p>
+                </div>
+            </div>
+
+            <div class="row Tribal_Needs_Area align-items-center" onclick="assignPage('ladder')">
+                <div class="col-sm-5 col-xs-12">
+                    <img src="../image/ladder.png" class="Tribal_Needs_Img align-items-center">
+                </div>
+                <div class="col-sm-7 col-xs-12 Tribal_Needs_word ">
+                    <h3 ><b>書梯</b><br></h3>
+                    <p>方便拿取較高位置的書籍</p>
+                </div>
+            </div>
+
+            <div class="row Tribal_Needs_Area align-items-center" onclick="assignPage('computer')">
+                <div class="col-sm-5 col-xs-12">
+                    <img src="../image/computer.png" class="Tribal_Needs_Img align-items-center">
+                </div>
+                <div class="col-sm-7 col-xs-12 Tribal_Needs_word ">
+                    <h3 ><b>電腦</b><br></h3>
+                    <p>方便幫書籍編號，以便借取、歸還，以及找尋。</p>
+                </div>
+            </div>
+            <!--我們的聯絡資料-->
+            <footer class="row jumbotron page-Content">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <ul>
+                        <li style="display: inline-block"><a href="./index.html">首頁</a></li>
+                        <li style="display: inline-block"><a href="./Website_Concept.html">網站理念</a></li>
+                        <li style="display: inline-block"><a href="./Culture_Introduction.html">文化介紹</a></li>
+                        <li style="display: inline-block"><a href="./Daily_Introduction.html">日常介紹</a></li>
+                        <li style="display: inline-block"><a href="./Tribal_Needs.html">部落需求</a></li>
+                        <li style="display: inline-block"><a href="./Contact_Us.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                    。信箱:Example@mail.com<br>
+                    。<abbr title="Phone">電話:</abbr>0987094487<br>
+                    。地址:台中市西屯區文華路100號
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

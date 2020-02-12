@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>捐物資料填寫</title>
+        <meta name= "viewport" content= "width-device-width, initial-scale= 1.0">
+        <link rel="stylesheet" type="text/css" href="../css/templateCss.css">
+        <!-- init import-->
+        <a>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        </a>
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="../image/logo.png" alt="" style="max-width: 80px">
+                </a>
+                <button class="custom-toggler navbar-toggler" type="button" 
+                    data-toggle="collapse" data-target="#projectNavbar" 
+                    aria-controls="navbarResponsive" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="projectNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">首頁
+                            <!--span class="sr-only">(current)</span-->
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Website_Concept.html">網站理念</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Culture_Introduction.html">文化介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Daily_Introduction.html">日常介紹</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Tribal_Needs.html">部落需求</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Contact_Us.html">聯絡我們</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div><h1 style="margin-left: 0">我要捐贈</h1></div>
+        </div>
+
+        <section id="intro-header">
+            <div class="container">
+                <div class="row">
+                    <div class="wrap-headline">
+                        <h1 class="text--center">松林啟航 部落飛翔</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <h1 class="mt-5">
+                <script>
+                    var current_href = location.href;
+                    var split_string = '';
+                    var itemName = '';
+                    for(var i=0; i<current_href.split('/').length; i++){
+                        split_string = current_href.split('/')[i];
+                        if(split_string.indexOf('Fill_Infomation.html') == -1) continue;
+                    }
+                    
+                    for(var i=0; i<split_string.split('?').length; i++){
+                        if((pos = split_string.split('?')[i].indexOf('itemName')) == -1) continue;
+                        itemName = split_string.split('?')[i].split('=')[1];
+                    }
+                    var title = '';
+                    if(itemName == 'book') title = '書籍';
+                    else if(itemName == 'dehumidifier') title = '除濕機';
+                    else if(itemName == 'bookcase') title = '書櫃';
+                    else if(itemName == 'ladder') title = '書梯';
+                    else if(itemName == 'computer') title = '電腦';
+                    document.write('我要捐贈'+title);
+                </script>
+            </h1>
+                <!--必填欄位警告-->
+                <script type = "text/javascript">
+                    function EnterError() {
+                    var Name = document.getElementById("FillInformation_userName").value;               //輸入姓名
+                    var Email = document.getElementById("FillInformation_userEmail").value;             //輸入電子郵件                                           //最終result
+                    var PhoneNumber = document.getElementById("FillInformation_userPhoneNumber").value; //輸入電話號碼
+                    var Quantity = document.getElementById("FillInformation_userQuantity").value;       //輸入捐贈數量
+
+                        if(Name.length == 0 || Email.length == 0 || PhoneNumber.length == 0 || Quantity.length == 0) {
+                            document.getElementById("error-msg").innerHTML = "*為必填欄位";
+                        } else {
+                            document.getElementById("error-msg").innerHTML = "";
+                            window.alert('謝謝您的參與，送出成功^_^');
+                        }
+
+                    }
+
+                </script>
+
+            <!--顯示捐贈數量與需求數量-->
+            <div class="page-Content">
+
+                <div class="row Fill_Information_Area align-items-center">
+                    <script>
+                        var current_href = location.href;
+                        var split_string = '';
+                        var itemName = '';
+                        for(var i=0; i<current_href.split('/').length; i++){
+                            split_string = current_href.split('/')[i];
+                            if(split_string.indexOf('Fill_Infomation.html') == -1) continue;
+                        }
+                        
+                        for(var i=0; i<split_string.split('?').length; i++){
+                            if((pos = split_string.split('?')[i].indexOf('itemName')) == -1) continue;
+                            itemName = split_string.split('?')[i].split('=')[1];
+                        }
+        
+                        document.write(
+                            '<div class="col-sm-5 col-xs-12">'+
+                                '<img src="../image/'+itemName+'.png" class="Tribal_Needs_Img align-items-center">'+
+                            '</div>'+
+                            '<div class="col-sm-7 col-xs-12">'+
+                                '<h4>已捐贈數量/需求數量</h4>'+
+                            '</div>'
+                        );
+                    </script>
+                </div>            
+            </div>
+
+            <!--資料填寫欄位-->
+            <div class="container">
+                <div class="page-FillInformation">
+                    <h1 class="mt-5">資料填寫</h1>
+                    <div class="page-FillInformation" style="padding-bottom: 30px;">
+                        <div class="row" style="margin-left: auto; margin-right: auto;">
+                            <div class="col-xs-12" style="width: 100%;">
+                                <form style="width: inherit;" >
+                                    <table id="UserNameByThemself" style="width: 100%;">
+                                        <tr>
+                                            <td style="width: 100px">*姓名：</td>
+                                            <td><input type="text" id="FillInformation_userName" name="your-message" style="height: 5vh; width: 100%; padding: 0;" placeholder="例如:王小明"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width: 100px">*電子郵件：</td>
+                                            <td><input type="email" id="FillInformation_userEmail" name="your-message" style="height: 5vh; width: 100%; padding: 0;" placeholder="請輸入您的電子郵件"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width: 100px">*連絡電話：</td>
+                                            <td><input type="tel" id="FillInformation_userPhoneNumber" name="your-message" style="height: 5vh; width: 100%; padding: 0;" placeholder="請輸入您的電話"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="width: 100px">*捐贈數量：</td>
+                                            <td><input type="number" id="FillInformation_userQuantity" name="your-message" style="height: 5vh; width: 100%; padding: 0;" placeholder="請輸入您欲捐贈的數量"></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="vertical-align: top;">備註：</td>
+                                            <td><textarea name="your-message" id="FillInformation_userMessage" style="height: 30vh; width: 100%; padding: 0;" placeholder="Note"></textarea></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td></td>
+                                            <td align="right" style="font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;">
+                                                <input class="btn btn-warning" type="reset" value="重設">
+                                                <input class="btn btn-success" type="button" value="送出" onclick="EnterError()"><br>
+                                                <small id="error-msg" style="color: red;"></small>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--我們的聯絡資料-->
+            <footer class="row jumbotron page-Content">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <ul>
+                        <li style="display: inline-block"><a href="./index.html">首頁</a></li>
+                        <li style="display: inline-block"><a href="./Website_Concept.html">網站理念</a></li>
+                        <li style="display: inline-block"><a href="./Culture_Introduction.html">文化介紹</a></li>
+                        <li style="display: inline-block"><a href="./Daily_Introduction.html">日常介紹</a></li>
+                        <li style="display: inline-block"><a href="./Tribal_Needs.html">部落需求</a></li>
+                        <li style="display: inline-block"><a href="./Contact_Us.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-12">
+                    。信箱:Example@mail.com<br>
+                    。<abbr title="Phone">電話:</abbr>0987094487<br>
+                    。地址:台中市西屯區文華路100號
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

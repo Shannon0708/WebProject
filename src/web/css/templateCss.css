@@ -1,0 +1,133 @@
+body {
+  padding-top: 120px;
+}
+
+.navbar {
+  /* background-color: #eecc8d; */
+
+  /* background:linear-gradient(top,#0000FF,rgba(255,0,0,0.5)),url(side.jpg) center bottom;
+     background:-moz-linear-gradient(top,#0000FF,rgba(148,153,166,0.5)),url(side.jpg) center bottom; */
+  background: -webkit-linear-gradient(top, rgba(148, 153, 166, 0.5), #f1ded1), url(../image/side3.jpg) center bottom;
+
+  /* 9499A6 f1ded1
+     background:-webkit-linear-gradient(top,#F1DED1,rgba(148,153,166,0.5)),url(side.jpg) center bottom;
+     height: 100px; */
+
+  /* background-image: url(side.jpg);
+     background-size: auto 100%; */
+}
+
+/*
+.navbar-toggler-icon {
+  border-color: black;
+  border: aqua 5px solid;
+} */
+
+.custom-toggler.navbar-toggler {
+  border: rgb(99, 99, 99) 5px solid;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(99, 99, 99)' stroke-width='5' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-nav li a {
+  /* .navbar-nav li a:hover */
+  color: white;
+  text-shadow: -1px -1px  0 gray, 1px 1px 0 gray, -1px -1px 0 gray, 1px 1px 0 gray;
+  font-size: 30px;
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+}
+
+div.container h1 {
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+}
+
+section#intro-header {
+  background-image: url(../image/img01.jpg);
+  background-size: cover;
+}
+
+section#intro-header .wrap-headline {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-top: 35%;
+  padding-bottom: 5%;
+}
+
+section#intro-header h1 {
+  color: aliceblue;
+  font-size: 5vw;
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+}
+
+.page-Content {
+  /* 這個線以後會消失
+  border: red 1px solid; */
+  margin-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+}
+
+.Content-Image {
+  max-width: 20vw;
+}
+
+.Tribal_Needs_Img {
+  max-width: 200px;
+  max-height: 200px;
+
+  /*
+  width: 400px;
+  padding: 5px;
+  margin: 10px;
+  */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#Tribla_Needs_table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Tribal_Needs_word {
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+  font-size: x-large;
+}
+
+.Tribal_Needs_Area {
+  min-height: 220px;
+  border: black 1px solid;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Tribal_Needs_Area:hover {
+  background: rgba(91, 233, 122, 0.589);
+}
+
+.Daily_Introduction_Type {
+  width: 400px;
+  font-size: 18px;
+  font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;
+}
+
+.Daily_Introduction_Img {
+  width: inherit;
+  border: 1px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.Fill_Information_Area {
+  min-height: 220px;
+  border: black 1px solid;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}

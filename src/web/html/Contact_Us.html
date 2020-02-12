@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>聯絡我們</title>
+    <meta name= "viewport" content= "width-device-width, initial-scale= 1.0">
+        <link rel="stylesheet" type="text/css" href="../css/templateCss.css">
+        <!-- init import-->
+        <a>
+            <!--script type="text/javascript" src="/js/lib/dummy.js"></script-->
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+            <!--style id="compiled-css" type="text/css"></style-->
+            <script type="text/javascript" src="../js/app.js"></script>
+            <script data-main="js/app.js" src="../js/require.js"></script>
+        </a>
+        <script>
+            function getMessage(){
+                var name = document.getElementById('ContactUs_userName').value;
+                var msg = document.getElementById('ContactUs_userMessage').value;
+                if(name == '') alert('暱稱不能為空白');
+                else if(msg == '') alert('內容不能為空白');
+                else{
+                    document.getElementById('user_name').innerHTML = name;
+                    document.getElementById('user_msg').innerHTML = msg;
+                    document.getElementById('ContactUs_userName').innerHTML = '';
+                }
+            }
+        </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">
+                <img src="../image/logo.png" alt="" style="max-width: 80px">
+            </a>
+            <button class="custom-toggler navbar-toggler" type="button" 
+                data-toggle="collapse" data-target="#projectNavbar" 
+                aria-controls="navbarResponsive" aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="projectNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">首頁
+                        <!--span class="sr-only">(current)</span-->
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Website_Concept.html">網站理念</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Culture_Introduction.html">文化介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Daily_Introduction.html">日常介紹</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Tribal_Needs.html">部落需求</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./Contact_Us.html">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div><h1 style="margin-left: 0">聯絡我們</h1></div>
+    </div>
+    <section id="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="wrap-headline">
+                    <h1 class="text--center">松林啟航 部落飛翔</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br><br>
+
+
+    <!--留言顯示區域; z-index:越小越上層，越大越下層-->
+    <div class="container">
+        <div class="page-Content" style="border: black 1px solid;">
+            <h1 class="mt-5">留言版</h1>
+            <hr>
+            <div class="row">
+                <div class="col-xs-12" style="width: 100%; padding-top: 3%;">
+                    <h3 id="user_name">尚無使用者留言</h3>
+                    <div id="user_msg" style="border: black 1px solid; width: 100%; padding-left: 10px; padding-right: 10px; font-size: large; font-weight: lighter; margin-bottom: 50px;">
+                        尚無使用者留言
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="page-Content" style="border: black 1px solid; padding-bottom: 20px;">
+            <h1 class="mt-5">我要留言</h1>
+            <div class="row" style="margin-left: auto; margin-right: auto;">
+                <div class="col-xs-12" style="width: 100%;">
+                    <form style="width: inherit;" >
+                        <table id="UserNameByThemself" style="width: 100%;">
+                            <tr>
+                                <td style="width: 70px">暱稱：</td>
+                                <td><input type="text" id="ContactUs_userName" name="your-message" style="height: 5vh; width: 100%; padding: 0;"></td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">內容：</td>
+                                <td><textarea name="your-message" id="ContactUs_userMessage" style="height: 30vh; width: 100%; padding: 0;" placeholder="請在此留言"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td align="right" style="font-family: 'Helvetica', 'Arial', 'LiHei Pro', '黑體-繁', '微軟正黑體', sans-serif;">
+                                    <input class="btn btn-warning" type="reset" value="重設"> <input class="btn btn-success" type="reset" value="送出" onclick="getMessage()">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--我們的聯絡資料-->
+        <footer class="row jumbotron page-Content">
+            <div class="col-lg-6 d-none d-lg-block">
+                <ul>
+                    <li style="display: inline-block"><a href="./index.html">首頁</a></li>
+                    <li style="display: inline-block"><a href="./Website_Concept.html">網站理念</a></li>
+                    <li style="display: inline-block"><a href="./Culture_Introduction.html">文化介紹</a></li>
+                    <li style="display: inline-block"><a href="./Daily_Introduction.html">日常介紹</a></li>
+                    <li style="display: inline-block"><a href="./Tribal_Needs.html">部落需求</a></li>
+                    <li style="display: inline-block"><a href="./Contact_Us.html">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-12">
+                。信箱:Example@mail.com<br>
+                。<abbr title="Phone">電話:</abbr>0987094487<br>
+                。地址:台中市西屯區文華路100號
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+
+    <!--JavaScript-->
+    <!--
+    <script type = "text/javascript">
+        //讓changeTempMethod在網頁開啟時就執行
+        window.onload = function() {
+            var datasource="ContactUs_userName";
+            var username="root";
+            var password="Ilovecsie4ever";
+            try {   //用 JavaScript 寫伺服器端連線資料庫的程式碼示例
+                var conn = new ActiveXObject("ADODB.Connection");
+                conn.Open("Provider=MSDASQL.1; Data Source="+datasource+"; User ID="+username+"; Password="+password+"");
+                var rs = new ActiveXObject("ADODB.Recordset");
+                var sql="select * from test";
+                rs.open(sql, conn, 1,1 );
+                    while (!rs.EOF) {
+                        document.write(rs("id"));
+                        document.write("<BR>");
+                        rs.MoveNext;
+                    }
+            } catch (errer) {
+                alert(errer.description);
+            }
+        };
+
+        function Edit(id) {
+            window.location.href
+            var UserName = document.getElementById("ContactUs_userName").Value;
+            var UserFeedback = document.getElementById("ContactUs_userMessage").Value;
+            var sql = 'SELECT * FROM feedback';
+            var Message = 'INSERT INTO feedback(nickname, feedback) VALUES ("'; Message += UserName + '","' + UserFeedback + '")';
+
+            con.query(Message, function(err, result) {
+                if(err) {
+                    console.log('[INSERT] - ', err.message);
+                    return;
+                } else {
+                    console.log('------INSERT---------');
+                    console.log(result);
+                    console.log('-------------------\n\n');
+
+                }
+            });
+
+            //查
+            con.query(sql,function (err, result) {
+                if(err){
+                console.log('[SELECT ERROR] - ',err.message);
+                return;
+                }
+
+            console.log('---------SELECT---------');
+            console.log(result);
+            console.log('--------------------\n\n');
+            });
+
+
+            con.end();
+            
+        }
+    </script>
+    -->
